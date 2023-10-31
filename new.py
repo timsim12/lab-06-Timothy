@@ -7,8 +7,10 @@ def encode(user_password):
 
 
 def decode(encoded_password):
-    pass
-
+    new_user_password = ""
+    for i in range(len(encoded_password)):
+        new_user_password = new_user_password + (str(10 + int(encoded_password[i]) - 3))[-1]
+    return new_user_password
 
 encoded_pass = ""
 decoded_pass = ""
